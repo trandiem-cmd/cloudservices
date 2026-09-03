@@ -22,33 +22,76 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
+      text-align: left;
+      padding: 10px 10px;
       background: white;
     }
 
     .hero-content {
-      max-width: 700px;
+      max-width: 1000px;
     }
 
     .hero h2 {
       font-size: 48px;
       margin-bottom: 15px;
+      text-align: center;
     }
-
+    .hero h3 {
+      font-size: 20px;
+      
+    }
     .hero p {
       font-size: 18px;
-      color: #666;
+      color: black;
       margin-bottom: 25px;
+    }
+    .hero div {
+        padding: 10px 0px;
     }
   </style>
 </head>
 
 <body>
-    <section class="hero">
-      <div class="hero-content">
-        <h2>Welcome to My Website</h2>
-      </div>
+    <section class="hero"> 
+        <div class="hero-content">
+            <h2>Weekly assignment 2 - Diem Tran</h2>
+            <h3> 1. Explain what is serverless architecture? </h3>
+                <div><b><i>Answer: </i></b><br>
+                    Serverless architecture is a software design approach in which developers can build and deploy applications without directly managing the underlying servers or infrastructure. Serverless applications still run on servers, but the cloud service provider is responsible for provisioning resources, maintaining the infrastructure, and scaling the system when necessary. This allows developers to focus more on writing application code and developing business functions rather than managing servers.
+                    <br>The term “serverless” does not mean that there are no servers. Instead, it means that server management is largely hidden from developers. From the developer’s perspective, they mainly need to write and deploy the code, while the cloud provider handles tasks such as hardware maintenance, software updates, security, and resource management. In addition, serverless applications can automatically scale up when the number of requests increases and scale down when the workload decreases. For example, an application may use very few resources when there are only a few users, but automatically use more resources when traffic becomes high.
+                    <br><i>Source: <a href="https://cloud.google.com/discover/what-is-serverless-architecture"> https://cloud.google.com/discover/what-is-serverless-architecture </i></a>
+                </div>
+            <h3>2. When it is more feasible solution to use application containers (app virtualization) than full OS virtualization to provide networked services?</h3>
+                <div><b><i>Answer: </i></b><br>
+                    There are some factors to consider when choosing between virtual machines and containers for application deployment. It is more preferable to use application containers instead of full operating system virtualization when efficiency, fast deployment, and high service density are important.
+                    <br><b>- Software development speed:</b>
+                    <br>Containers are a better choice if you want to build, test, and release new features frequently. As they only include high-level software, they are very fast to modify and iterate on while
+                    Virtual machines are full-stack systems and can be laborious to build and regenerate. 
+                    <br><b>- Scalability:</b>
+                    <br>Containers take up less space and are easier to scale. More importantly, containers provide granular control on application scalability by allowing you to use microservices. Microservices are an architectural and organizational approach to software development where software is composed of small independent services that communicate over well-defined APIs. Containers let you scale individual microservices as required while virtual machines take up more storage space and require you to provision more hardware in your on-premises data centers. 
+                    <br><b>- Environment configuration:</b>
+                    <br>Containers provide static definitions of configurations once the best ones have been selected while virtual machines give developers more control over the application's environment. 
+                    <br><i>Source: <a href="https://aws.amazon.com/compare/the-difference-between-containers-and-virtual-machines/"> https://aws.amazon.com/compare/the-difference-between-containers-and-virtual-machines/ </i></a> 
+                </div>
+            <h3>3. Compare application containers to microservices</h3>
+                <div><b><i>Answer: </i></b><br>
+                    The difference between microservices and containers lies in their roles within software architecture. Microservices refer to an architectural style where an application is divided into smaller, independent services, each handling a specific business function. These services can be developed, deployed, and scaled independently, offering flexibility and easier management.
+                    <br>Containers, on the other hand, are a technology used to package applications and their dependencies into isolated environments, ensuring that they run consistently across various stages of development, testing, and production.
+                    <br>In essence, microservices define the structure and interaction of application components, while containers are used to package and deploy these components in a portable, scalable way.
+                    <br>For example, a food delivery application can be divided into several microservices, such as Restaurant Service, Order Service, Payment Service, and Delivery Service. Each microservice is responsible for one specific business function and can be developed, updated, and scaled independently. For instance, if the number of orders increases significantly, the company can scale the Order Service without necessarily scaling the other services.
+                    Each of these microservices can be packaged and deployed in a separate Docker container. In this case, Docker provides the environment in which the services run, while the microservices architecture defines how the application is divided into independent services. Therefore, microservices define the application structure, whereas containers provide a practical way to deploy and run those services.
+                    <br><i>Source: <a href="https://fusionhit.com/blog/the-rising-adoption-of-microservices-and-containers/"> https://fusionhit.com/blog/the-rising-adoption-of-microservices-and-containers/ </i></a> 
+
+                </div>
+            <h3>4. Describe shortly what is Kubernetes and what alternatives are there?</h3>
+                <div><b><i>Answer: </i></b><br>
+                    Kubernetes is a portable, extensible, open source platform for managing containerized workloads and services that facilitate both declarative configuration and automation. 
+                    <br>Kubernetes provides you with Service discovery and load balancing, Storage orchestration, Automated rollouts and rollbacks, Automatic bin packing, Self-healing, Secret and configuration management, Batch execution, Horizontal scaling, IPv4/IPv6 dual-stack and Designed for extensibility.
+                    <br> There are several alternatives to Kubernetes, depending on your project's scale, infrastructure, and team expertise. They offer varying levels of simplicity and control.
+                    <br> Alternatives : Docker Swarm, HashiCorp Nomad, Apache Mesos, and managed container platforms such as Amazon ECS and Azure Container Apps. For example, Kubernetes is particularly suitable for complex multi-service environments requiring extensive automation, whereas a smaller organization may prefer ECS or Docker Swarm because of their comparatively simpler operational model.
+                    <br><i>Source: <a href="https://www.doit.com/blog/kubernetes-alternatives/"> https://www.doit.com/blog/kubernetes-alternatives/ </i></a> 
+                </div>
+        </div>
     </section>
 </body>
 </html>
